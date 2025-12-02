@@ -2,6 +2,8 @@
 
 Este proyecto es una aplicación web construida con [Angular](https://github.com/angular/angular) versión 16. Utiliza Firebase para el backend y hosting, y Bootstrap para el diseño de la interfaz.
 
+> 🎁 **Nota Especial:** Este proyecto es un presente de cumpleaños. 🎉
+
 ## 🚀 Características Principales
 
 *   **Frontend Framework:** Angular 16
