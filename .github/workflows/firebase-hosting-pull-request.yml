@@ -19,3 +19,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_MAYE2025_33C2B }}
           projectId: maye2025-33c2b
+          channelId: live
