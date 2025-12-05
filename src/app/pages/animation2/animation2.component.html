@@ -1,0 +1,51 @@
+<div class="over">
+    <div class="centre">
+        <div class="main">
+            <!--header -->
+            <header>
+                <h1 [@logoPosition]="activeItem ? 'corner' : 'center'">
+                    <span id="logo"><img src="assets/images/logo.png" alt=""></span>
+                </h1>
+
+                <nav class="menu" [@menuContainer]="isMenuVisible ? 'visible' : 'hidden'">
+                    <ul id="menu">
+                        <li *ngFor="let item of menuItems" [id]="'nav' + item.id" [style.top.px]="item.top"
+                            [style.left.px]="item.left" (mouseenter)="onMouseEnter(item.id)"
+                            (mouseleave)="onMouseLeave()" (click)="selectItem(item)">
+
+                            <img [src]="'assets/images/' + item.image" alt="{{ item.label }}"
+                                [@menuItemHover]="hoveredItemId === item.id ? 'hover' : 'normal'">
+
+                            <span [@menuItemText]="hoveredItemId === item.id ? 'visible' : 'hidden'">
+                                {{ item.label }}
+                            </span>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <!--header end-->
+
+            <!--content -->
+            <article id="content" *ngIf="activeItem" [@contentTransition]>
+                <ul>
+                    <li>
+                        <img src="assets/images/bg_content.png" alt="{{ activeItem.label }}" class="bg_cont">
+                        <span class="back" (click)="closeContent()">
+                            <img [src]="'assets/images/' + activeItem.image" alt="">
+                            <a>Volver</a>
+                        </span>
+                        <div class="pad">
+                            <h2>{{ activeItem.contentTitle }}</h2>
+                            <p [innerHTML]="activeItem.contentBody"></p>
+
+                            <div *ngIf="activeItem.id === 3" id="loveHeart"
+                                style="margin-top: 30px;font-size: 25px;display: flex; justify-content: center; text-align: justify;">
+                                <img src="assets/images/1.gif" />　　　　<img src="assets/images/2.gif" />
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</div>

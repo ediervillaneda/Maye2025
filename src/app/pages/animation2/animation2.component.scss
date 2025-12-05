@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Delius&display=swap');
+
+/* Reset */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset,
+img {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+input,
+textarea {
+    caret-color: transparent;
+    outline: none; // opcional, si no querés borde al hacer focus
+}
+
+/* Main Styles */
+
+body {
+    background: url('../../../assets/images/bg.png') no-repeat center center fixed;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.relative {
+    position: relative;
+}
+
+:host {
+    background: url('../../../assets/images/bg.png') no-repeat center center fixed;
+    display: block;
+    border: 0;
+    font: 12px "Delius", cursive;
+    color: #939090;
+    line-height: 21px;
+    height: 100%;
+    width: 100%;
+}
+
+.main {
+    margin: 0;
+    width: 946px;
+    height: 730px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centre {
+    /* Removed padding/margin logic as main is now absolutely positioned */
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.over {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* Hide overflow as we scale to fit */
+}
+
+a {
+    color: #939090;
+    text-decoration: none;
+    outline: none;
+    cursor: pointer;
+}
+
+h1 {
+    position: absolute;
+    top: 184px;
+    left: 329px;
+    z-index: 10
+}
+
+h2 {
+    font: 30px 'Amatic SC', cursive;
+    line-height: 1.2em;
+    padding: 0 0 24px 0;
+    color: #3e3434;
+    text-align: center;
+    letter-spacing: -3px;
+    font-weight: bold;
+    text-shadow: 0 0 #3e3434;
+    font-family: "Delius", cursive;
+}
+
+h2 span {
+    display: block;
+    font-size: 24px;
+    color: #766f6f;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-shadow: 0 0 #766f6f;
+    padding-bottom: 4px;
+}
+
+p {
+    padding-bottom: 18px;
+}
+
+#logo {
+    display: block;
+}
+
+#logo img {
+    position: relative;
+    top: 25px;
+    left: 25px
+}
+
+
+#menu>li {
+    position: absolute;
+    cursor: pointer;
+}
+
+#menu>li>img {
+    position: relative;
+    z-index: 6;
+    top: 15px;
+    left: 15px;
+}
+
+#menu>li>span {
+    position: absolute;
+    width: 145px;
+    height: 157px;
+    top: 15px;
+    left: 15px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 1px 1px rgba(0, 0, 0, .2);
+    z-index: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    /* Let clicks pass through to li */
+}
+
+/* #nav1{ top:105px; left:304px;}
+#nav2{ top:239px; left:230px;}
+#nav3{ top:372px; left:304px;}
+#nav4{ top:372px; left:458px;}
+#nav5{ top:239px; left:536px;}
+#nav6{ top:105px; left:458px;} */
+
+#navigation {
+    position: absolute;
+    z-index: 12;
+    top: 120px;
+    left: 245px;
+    height: 451px;
+    width: 451px;
+}
+
+#content {
+    height: 636px;
+    padding-bottom: 64px;
+}
+
+#content>ul>li {
+    position: relative;
+    left: 225px;
+    top: 27px;
+    width: 100%;
+}
+
+.bg_cont {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1
+}
+
+.pad {
+    position: relative;
+    z-index: 2;
+    left: 88px;
+    top: 100px;
+    width: 388px;
+    height: 400px;
+    font-size: 16px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    box-sizing: border-box;
+}
+
+.back {
+    position: absolute;
+    top: 384px;
+    left: 477px;
+    z-index: 6;
+    cursor: pointer;
+}
+
+.back img {
+    position: relative;
+    top: 15px;
+    left: 15px;
+    width: 145px;
+    height: 157px;
+}
+
+.back a {
+    position: absolute;
+    top: 85px;
+    left: 15px;
+    color: #fff;
+    text-align: center;
+    width: 145px;
+    text-shadow: 1px 1px rgba(0, 0, 0, .4)
+}
