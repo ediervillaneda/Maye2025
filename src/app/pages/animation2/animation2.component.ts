@@ -97,7 +97,7 @@ export class Animation2Component {
       top: 239,
       left: 536,
       contentTitle: '🦋 Belleza e Inteligencia',
-      contentBody: 'Admiro tu capacidad para resolver problemas y tu <b>elegancia</b> para enfrentar la vida. Tu belleza no es solo lo que vemos por fuera, sino esa <i>inteligencia y bondad</i> que irradias ✨. Estoy orgulloso/a de ser tu amigo/a. <b>¡Felicidades hoy y siempre!</b> 🚀'
+      contentBody: 'Admiro tu capacidad para resolver problemas y tu <b>elegancia</b> para enfrentar la vida. Tu belleza no es solo lo que vemos por fuera, sino esa <i>inteligencia y bondad</i> que irradias ✨. Estoy orgulloso de ser tu amigo. <b>¡Felicidades hoy y siempre!</b> 🚀'
     },
     {
       id: 6,
